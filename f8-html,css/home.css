@@ -1981,14 +1981,6 @@ button i,
     top: -1.5px;
 }
 
-/* .header-main .links>li>a:before,
-.header-main i[class^="fa- fa- "] {
-    font-family: 'icomoon' !important;
-    display: block;
-    width: 100%;
-    text-align: center;
-} */
-
 .links>li>a:before,
 i[class^="fa- fa- "] {
     font-family: 'fl-icons' !important;
@@ -2099,11 +2091,16 @@ input[type='button'] {
     box-sizing: border-box;
 }
 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
 button,
 .button {
     text-transform: none;
 }
-
 
 @media screen and (min-width: 850px) {
     .large-8 {
