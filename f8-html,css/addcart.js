@@ -5,14 +5,14 @@ function add() {
 
 function sub() {
     let value = document.getElementById("quantity_6333e22b50564").value;
-    if (value == 0) return;
+    if (value <= 1) return;
     document.getElementById("quantity_6333e22b50564").value = parseInt(value) - 1;
 }
 
 
-function addcart(id, img, name, price) {
-    const num = parseInt(document.getElementById("quantity_6333e22b50564")) || 1;
-    let numcart = window.localStorage.getItem("numcart");
+function addcart(id, img, name, link, price) {
+    const num = parseInt(document.getElementById("quantity_6333e22b50564").value) || 1;
+    let numcart = window.localStorage.getItem("numcart") || 0;
     let newnumcart = parseInt(numcart) + num;
     window.localStorage.setItem("numcart", newnumcart);
 
@@ -21,6 +21,7 @@ function addcart(id, img, name, price) {
         const obj = {
             "img": img,
             "name": name,
+            "link": link,
             "price": price,
             "num": num
         }
