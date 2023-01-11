@@ -568,7 +568,17 @@
             } else {
                 setSuccessFor(rePassword, "")
             }
-            console.log("check2", check);
+            const existUser = JSON.parse(localStorage.getItem("acc"));
+            console.log("existUser", existUser);
+            if(existUser != undefined){
+                console.log("check10", check);
+                    if (emailValue == existUser.email) {
+                        console.log("email da ton tai");
+                        setErrorFor(email, "Email đã tồn tại");
+                        check = false;
+                }
+            }
+            console.log("check2", check)
             if (check == true) {
                 console.log("check3", check);
                 console.log("email2", email);
@@ -633,7 +643,7 @@
                 const loginUser = JSON.stringify(user);
                 console.log("login success");
                 localStorage.setItem("login", loginUser);
-                window.location.href = "home2.html";
+                window.location.href = "home.html";
                 return;
             }
             else {
