@@ -73,7 +73,7 @@
                                         </li>
                                         <li
                                             class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
-                                            <a href="customer_logout.html">Thoát</a>
+                                            <a href="login.html">Thoát</a>
                                         </li>
                                     </ul>
                                     </a>
@@ -243,36 +243,29 @@
                                             <span class="password-input"><input type="password"
                                                     class="woocommerce-Input woocommerce-Input--password input-text"
                                                     name="password_current" id="password_current"
-                                                    autocomplete="off"><span class="show-password-input"></span></span>
+                                                    autocomplete="off"><small style="color: red;"></small></span>
                                         </p>
                                         <p
                                             class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                                             <label for="password_1">Mật khẩu mới (bỏ trống nếu không đổi)</label>
                                             <span class="password-input"><input type="password"
                                                     class="woocommerce-Input woocommerce-Input--password input-text"
-                                                    name="password_1" id="password_1" autocomplete="off"><span
-                                                    class="show-password-input"></span></span>
+                                                    name="password_1" id="password_1" autocomplete="off"><small style="color: red;"></small></span>
                                         </p>
                                         <p
                                             class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                                             <label for="password_2">Xác nhận mật khẩu mới</label>
                                             <span class="password-input"><input type="password"
                                                     class="woocommerce-Input woocommerce-Input--password input-text"
-                                                    name="password_2" id="password_2" autocomplete="off"><span
-                                                    class="show-password-input"></span></span>
+                                                    name="password_2" id="password_2" autocomplete="off"><small style="color: red;"></small></span>
                                         </p>
                                     </fieldset>
                                     <div class="clear"></div>
 
-                                    <p>
-                                        <input type="hidden" id="save-account-details-nonce"
-                                            name="save-account-details-nonce" value="ece35d0a61"><input type="hidden"
-                                            name="_wp_http_referer" value="/trang-ca-nhan/edit-account/"> <button
-                                            type="submit" class="woocommerce-Button button" name="save_account_details"
-                                            value="Lưu thay đổi">Lưu thay đổi</button>
-                                        <input type="hidden" name="action" value="save_account_details">
-                                    </p>
                                 </form>
+                                <p>
+                                   <button onclick="changePassword()">Lưu thay đổi</button>
+                                </p>
                             </div>
                         </div>
                     </div>
