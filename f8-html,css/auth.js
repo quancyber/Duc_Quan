@@ -4,7 +4,7 @@ const isLogin = JSON.parse(localStorage.getItem("login"));
 console.log("isLogin: ", isLogin);
 if (isLogin) {
   const user = JSON.parse(localStorage.getItem("acc"));
-  login.innerHTML = `<div class="display: flex"><b style="color: white;">${user.email}</b>|<a style="color: white;" href="/accountUser.html">Tài khoản</a>|<button style="background-color: #c29832" onclick="logout()">Đăng xuất</button><div>`;
+  login.innerHTML = `<div class="display: flex"><b style="color: white;">${user.email}</b>|<a style="color: white;" href="/accountUser.html">Tài khoản</a>|<button style="background-color: #c29832; color: white" onclick="logout()">Đăng xuất</button><div>`;
 }
 
 function logout() {
