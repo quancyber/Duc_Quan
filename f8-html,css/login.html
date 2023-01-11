@@ -503,10 +503,7 @@
                                         href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=45785"><img
                                             class="insImageload lazyloaded" data-load="true" alt="HITA"
                                             src="//theme.hstatic.net/1000290372/1000458418/14/dtb.png?v=1066"
-                                            width="200" data-ll-status="loaded"><noscript><img class="insImageload"
-                                                data-load="true" alt="HITA"
-                                                src="//theme.hstatic.net/1000290372/1000458418/14/dtb.png?v=1066"
-                                                width="200"></noscript></a>
+                                            width="200" ></a>
                                 </div>
 
                                 <div class="copy pull-left">
@@ -636,12 +633,12 @@
                 const loginUser = JSON.stringify(user);
                 console.log("login success");
                 localStorage.setItem("login", loginUser);
-                window.location.href = "home.html";
+                window.location.href = "home2.html";
                 return;
             }
             else {
-                setErrorFor(username, 'email hoặc mật khẩu không đúng');
-                setErrorFor(password, 'email hoặc mật khẩu không đúng');
+                setErrorFor(username, 'Email hoặc mật khẩu không đúng');
+                setErrorFor(password, 'Email hoặc mật khẩu không đúng');
             }
             // console.table(user);
         }
