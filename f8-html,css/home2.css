@@ -500,7 +500,7 @@ li.current-dropdown>.nav-dropdown,
 }
 
 .nav .nav-dropdown {
-    background-color: #dd9933;
+    background-color: white;
 }
 
 .nav-dropdown-has-shadow .nav-dropdown {
@@ -2544,7 +2544,7 @@ input[type='radio'] {
     pointer-events: none;
 }
 
-.account-item {
+/* .account-item {
     position: relative;
 }
 
@@ -2568,4 +2568,4 @@ input[type='radio'] {
 
 .account-link:hover+.nav-dropdown {
     display: block;
-}
+} */
