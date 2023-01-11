@@ -24,7 +24,7 @@ function addcart(id, img, name, link, price) {
             "name": name,
             "link": link,
             "price": price,
-            "num": num
+            "num": num,
         }
         window.localStorage.setItem(id, JSON.stringify(obj));
     } else {

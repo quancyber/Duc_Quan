@@ -26,6 +26,7 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="manageAccount.css">
     <link rel="stylesheet" href="orderUser.css">
+    <link rel="stylesheet" href="cart.css">
 
 </head>
 
@@ -53,8 +54,7 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                             <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
                                 <li class="cart-item has-icon has-dropdown">
 
-                                    <a href="https://store.hitasanti.com/gio-hang-hita/" title="Giỏ hàng"
-                                        class="header-cart-link is-small">
+                                    <a href="cart.html" title="Giỏ hàng" class="header-cart-link is-small">
                                         <span class="cart-icon image-icon">
                                             <strong>0</strong>
                                         </span>
@@ -70,22 +70,22 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                                     </ul>
                                 </li>
                                 <li class="account-item has-icon has-icon has-dropdown">
-                                    <a href="https://store.hitasanti.com/trang-ca-nhan/"
-                                        class="account-link account-login is-small" title="Tài khoản">
+                                    <a href="pageAccount.html" class="account-link account-login is-small"
+                                        title="Tài khoản">
                                         <span class="header-account-title">
                                             Nguyễn Anh Quân </span>
                                         <i class="fa-solid fa-user"></i>
                                     </a>
-                                    <ul class="nav-dropdown  nav-dropdown-default" style="">
+                                    <ul class="nav-dropdown  nav-dropdown-default">
 
                                         <li
                                             class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active active">
-                                            <a href="https://store.hitasanti.com/trang-ca-nhan/">Trang tài khoản</a>
+                                            <a href="pageAccount.html">Trang tài khoản</a>
                                             <!-- empty -->
                                         </li>
                                         <li
                                             class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
-                                            <a href="https://store.hitasanti.com/trang-ca-nhan/orders/">Đơn hàng</a>
+                                            <a href="orderUser.html">Đơn hàng</a>
                                         </li>
                                         <li
                                             class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
@@ -215,8 +215,7 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                         <ul class="mobile-nav nav nav-right ">
                             <li class="cart-item has-icon">
 
-                                <a href="https://store.hitasanti.com/gio-hang-hita/"
-                                    class="header-cart-link off-canvas-toggle nav-top-link is-small"
+                                <a href="cart.html" class="header-cart-link off-canvas-toggle nav-top-link is-small"
                                     data-open="#cart-popup" data-class="off-canvas-cart" title="Giỏ hàng"
                                     data-pos="right">
 
@@ -266,19 +265,48 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
         <div id="content" class="content-area page-wrapper" role="main">
             <div class="row row-main">
                 <div class="large-12 col">
-                    <div class="col-inner">
-                        <div class="woocommerce">
-                            <div class="woocommerce-MyAccount-content">
-                                <div class="woocommerce-notices-wrapper"></div>
-                                <div
-                                    class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
-                                    <a class="woocommerce-Button button" href="product.html">Tìm các sản phẩm</a>
-                                    Bạn chưa có đơn hàng nào.
-                                </div>
+                    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
+                        cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Đơn hàng</th>
+                                <th>Sản phẩm</th>
+                                <th>Người mua</th>
+                                <th>Địa chỉ</th>
+                                <th>Ghi chú</th>
+                                <th>Tổng thanh toán</th>
+                            </tr>
+                        </thead>
+                        <tbody id="all-order-user">
+                            <tr>
+                                <td>
+                                    <p style="padding-left:1.5rem">1</p>
+                                </td>
 
-                            </div>
-                        </div>
-                    </div>
+                                <td class="product-name" data-title="Sản phẩm">
+                                    <a href="cafesuada.html">Cà phê sữa đá x 1 = 1212</a><br>
+
+                                </td>
+                                <td>
+                                    <p>lộc</p>
+                                    <p>email</p>
+                                    <p>sdt</p>
+                                </td>
+                                <td>
+                                    <p>ship</p>
+                                    <p>địa chỉ</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                </td>
+                                <td class="product-subtotal">
+                                    <span class="woocommerce-Price-amount amount"><bdi>39,000<span
+                                                class="woocommerce-Price-currencySymbol">VND</span></bdi></span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -532,7 +560,8 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
             </div>
         </div>
     </footer>
-<script src="headerCart.js"></script>
+    <script src="headerCart.js"></script>
+    <script src="oderUser.js"></script>
 </body>
 
 </html>
