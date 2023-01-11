@@ -19,6 +19,7 @@ function addcart(id, img, name, link, price) {
     const cart = window.localStorage.getItem(id) || "";
     if (cart == "") {
         const obj = {
+            "id":id,
             "img": img,
             "name": name,
             "link": link,

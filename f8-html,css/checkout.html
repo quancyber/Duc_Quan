@@ -318,10 +318,10 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                         </div>
 
                         <div class="woocommerce">
-                            
-                            
 
-                            
+
+
+
                             <div class="woocommerce-notices-wrapper"></div>
                             <form name="checkout" method="post" class="checkout woocommerce-checkout "
                                 action="https://store.hitasanti.com/thanh-toan/" enctype="multipart/form-data"
@@ -333,7 +333,7 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                                         <div class="wc_coupon_message_wrap" style="padding: 10px 0 10px;">
                                             <div class="no_wc_coupon_message"></div>
                                         </div>
-                                        
+
                                         <div id="customer_details">
                                             <div class="clear">
                                                 <div class="woocommerce-billing-fields">
@@ -582,7 +582,8 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                                                                                 role="presentation"><b
                                                                                     role="presentation"></b></span></span></span><span
                                                                         class="dropdown-wrapper"
-                                                                        aria-hidden="true"></span></span></p>
+                                                                        aria-hidden="true"></span></span>
+                                                            </p>
                                                             <p class="form-row address-field validate-required validate-state form-row-wide"
                                                                 id="shipping_state_field" data-priority="80"
                                                                 data-o_class="form-row form-row-wide address-field validate-required validate-state">
@@ -680,7 +681,8 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                                                                                     role="presentation"><b
                                                                                         role="presentation"></b></span></span></span><span
                                                                             class="dropdown-wrapper"
-                                                                            aria-hidden="true"></span></span></span></p>
+                                                                            aria-hidden="true"></span></span></span>
+                                                            </p>
                                                             <p class="form-row address-field validate-postcode form-row-wide"
                                                                 id="shipping_postcode_field" data-priority="90"
                                                                 data-o_class="form-row form-row-wide address-field validate-postcode"
@@ -725,7 +727,8 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
 
                                     <div class="large-5 col">
                                         <div class="is-sticky-column">
-                                            <div class="is-sticky-column__inner" style="position: relative; transform: translate3d(0px, 0px, 0px);">
+                                            <div class="is-sticky-column__inner"
+                                                style="position: relative; transform: translate3d(0px, 0px, 0px);">
                                                 <div class="col-inner has-border">
                                                     <div class="checkout-sidebar sm-touch-scroll">
 
@@ -743,8 +746,8 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                                                                         <th class="product-total">Tạm tính</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                    <tr class="cart_item">
+                                                                <tbody id="checkout-cart-item">
+                                                                    <!-- <tr class="cart_item">
                                                                         <td class="product-name">
                                                                             Cà phê sữa đá&nbsp; <strong
                                                                                 class="product-quantity">×&nbsp;1</strong>
@@ -754,8 +757,8 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                                                                                 class="woocommerce-Price-amount amount"><bdi>39,000<span
                                                                                         class="woocommerce-Price-currencySymbol">VND</span></bdi></span>
                                                                         </td>
-                                                                    </tr>
-                                                                    <tr class="cart_item">
+                                                                    </tr> -->
+                                                                    <!-- <tr class="cart_item">
                                                                         <td class="product-name">
                                                                             Cold Brew Happy HITA&nbsp; <strong
                                                                                 class="product-quantity">×&nbsp;1</strong>
@@ -765,15 +768,14 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
                                                                                 class="woocommerce-Price-amount amount"><bdi>89,000<span
                                                                                         class="woocommerce-Price-currencySymbol">VND</span></bdi></span>
                                                                         </td>
-                                                                    </tr>
+                                                                    </tr> -->
                                                                 </tbody>
                                                                 <tfoot>
 
                                                                     <tr class="cart-subtotal">
                                                                         <th>Tạm tính</th>
-                                                                        <td><span
-                                                                                class="woocommerce-Price-amount amount"><bdi>128,000<span
-                                                                                        class="woocommerce-Price-currencySymbol">VND</span></bdi></span>
+                                                                        <td><span id="sub-total"
+                                                                                class="woocommerce-Price-amount amount"></span>
                                                                         </td>
                                                                     </tr>
 
@@ -820,9 +822,8 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
 
                                                                     <tr class="order-total">
                                                                         <th>Tổng</th>
-                                                                        <td><strong><span
-                                                                                    class="woocommerce-Price-amount amount"><bdi>153,000<span
-                                                                                            class="woocommerce-Price-currencySymbol">VND</span></bdi></span></strong>
+                                                                        <td><strong><span id="total"
+                                                                                    class="woocommerce-Price-amount amount"></span></strong>
                                                                         </td>
                                                                     </tr>
 
@@ -1147,5 +1148,5 @@ style="scroll-behavior: auto; margin-right: 17px; overflow: hidden;"> -->
 
 </body>
 <script src="headerCart.js"></script>
-
+<script src="checkout.js"></script>
 </html>
