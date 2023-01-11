@@ -11,7 +11,14 @@ function sub() {
 
 
 function addcart(id, img, name, link, price) {
-    const num = parseInt(document.getElementById("quantity_6333e22b50564").value) || 1;
+    const x = document.getElementById("quantity_6333e22b50564") || 0;
+    let num;
+    if (x != 0) {
+        num = parseInt(document.getElementById("quantity_6333e22b50564").value) || 1;
+    }
+    else { num = 1; }
+
+
     let numcart = window.localStorage.getItem("numcart") || 0;
     let newnumcart = parseInt(numcart) + num;
     window.localStorage.setItem("numcart", newnumcart);
@@ -19,7 +26,7 @@ function addcart(id, img, name, link, price) {
     const cart = window.localStorage.getItem(id) || "";
     if (cart == "") {
         const obj = {
-            "id":id,
+            "id": id,
             "img": img,
             "name": name,
             "link": link,

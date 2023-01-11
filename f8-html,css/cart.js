@@ -12,7 +12,7 @@ function add(id) {
 
 function sub(id) {
     let value = document.getElementById("quantity_6333e22b50564").value;
-    if (value <= 1) return;
+    if (value <= 0) return;
     let numcart = window.localStorage.getItem("numcart") || 0;
     let newnumcart = parseInt(numcart) - 1;
     window.localStorage.setItem("numcart", newnumcart);
@@ -24,14 +24,16 @@ function sub(id) {
     location.reload();
 }
 
+function deleteItem(id){
+    window.localStorage.removeItem(id)
+}
+
 const allcartitem = document.getElementById("all-cart-item");
 let strCart = "";
 let subTotalPrice = 0;
 for (let i = 1; i < 100; i++) {
-
     const item = window.localStorage.getItem(i.toString()) || "";
     if (item != "") {
-
         const obj = JSON.parse(item);
         const subtotal = parseInt(obj.price) * parseInt(obj.num);
         subTotalPrice += subtotal;
@@ -39,9 +41,9 @@ for (let i = 1; i < 100; i++) {
             <tr class="woocommerce-cart-form__cart-item cart_item">
             
                 <td class="product-remove">
-                    <a href="`+ obj.link + `"class="remove"
+                    <a href="cart.html"class="remove"
                         aria-label="Xóa sản phẩm này" data-product_id="29461"
-                        data-product_sku="" onclick="">×</a>
+                        data-product_sku="" onclick="deleteItem(`+i+`)">×</a>
                 </td>
             
                 <td class="product-thumbnail">
